@@ -146,7 +146,7 @@ header .container {
   justify-content: space-between;
   align-items: center; }
   header .container .logo img {
-    width: 7rem; }
+    width: 6rem; }
   header .container .primary-navigation .nav-links {
     display: flex; }
     header .container .primary-navigation .nav-links a {
