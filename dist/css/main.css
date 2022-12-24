@@ -150,7 +150,7 @@ header .container {
   header .container .primary-navigation .nav-links {
     display: flex; }
     header .container .primary-navigation .nav-links a {
-      padding: .5rem; }
+      padding: .3rem; }
 
 #storage .container {
   text-align: center; }
