@@ -1,0 +1,365 @@
+@import 'variables';
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.4;
+  font-family: $ff-Open-Sans;
+  min-width: 100vw;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+// a tag 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.bg-primary {
+    background-color: $clr-primary-db;
+    color: $clr-white;
+}
+
+.bg-primary-bd {
+    background-color: $clr-primary-bd;
+    color: $clr-white;
+}
+
+.bg-neutral-gb {
+    background-color: $clr-neutral-gb;
+    margin-top: 6rem;
+    position: relative;
+
+    &::before{
+        content: "";
+        background-image: url(../images/bg-curve-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top:-60px;
+        width: 100%;
+        height: 60px;     
+    }
+}
+
+.fw-400{font-weight: $fw-400;}
+.fw-700{font-weight: $fw-700;}
+
+.fs-h1{font-size: $fs-h-1;}
+.fs-h2{font-size: $fs-h-2;}
+
+.text-primary {color:$clr-primary-db;}
+
+.ff-h2 {font-family: $ff-raleway;}
+
+.even-columns{
+    display: grid;
+}
+
+.py {padding: 1rem 0;}
+.py-2{padding: 2rem 0;}
+
+.container{
+    max-width: 1440px;
+    margin: auto;
+    padding: 2rem 2rem;
+}
+
+%input{
+    padding: .7rem 1.5rem;
+    border-radius: .3rem;
+    border: 1px solid $clr-primary-db;
+    &::-webkit-input-placeholder{
+        opacity: .4;
+    }
+}
+
+%btn {
+    padding: .7rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: .3rem;
+    background-color: $clr-accent-bb;
+    color: #fff;
+    font-family: $ff-raleway;
+    font-weight: $fw-700;
+}
+
+header {
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo{
+            img {
+                width: 7rem;
+            }
+        }
+
+        .primary-navigation {
+
+            .nav-links{
+                display: flex;
+                a{
+                    padding: .5rem;
+                }
+            }
+        }
+    }
+}
+
+#storage {
+    .container {
+        text-align: center;
+        .even-columns {
+            div {
+                order: 2;
+                &>p, &> form {
+                    max-width:20.5rem;
+                    margin:2rem auto;
+                }
+                &>form {          
+                    input {
+                        width: 100%;
+                        @extend %input;
+                        margin-bottom: 1rem;
+                    }
+                    button {
+                        width: 100%;
+                        @extend %btn;
+                    }
+                }
+            }
+            picture {
+                order: 1;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+#hero {
+    
+    .container{
+        text-align: center;
+        .even-columns {
+            gap: 5rem;
+            div {
+                order: 2;
+                h2 {
+                    margin-bottom: 2rem;
+                }
+                &>p {
+                    text-align: left;
+                    margin-bottom: 2rem;
+                }
+                a{
+                    display: inline-flex;
+                    padding-bottom: .2rem;
+                    color: $clr-accent-mc;
+                    border-bottom: 2px solid $clr-accent-mc;
+                    img{
+                        margin-left: .5rem;
+                    }
+                }
+
+                .testimonial{
+                    text-align: left;
+                    max-width: 20rem;
+                    margin: 4rem auto;
+                    padding: 2rem .5rem 2rem 1.5rem;
+                    background-color: #fff;
+                    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+                    border-radius: .3rem;
+
+                    blockquote {
+                        margin-top: 1rem;
+                        font-size: .8rem;
+                        line-height: 1.7;
+                        font-weight: 500;
+                    }
+
+                    figcaption{
+                        display: flex;
+                        align-items: center;
+                        img {
+                            border-radius: 50%;
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        }
+                        .user-info {
+                            margin-left: 1rem;
+                            padding-top: 2rem;
+                            h6 {
+                                font-weight: $fw-700;
+                                margin: 0;
+                                font-size: .8rem;
+                            }
+
+                            p {
+                                margin-top: .3rem;
+                                font-size: .5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            picture {
+                order: 1;
+            }
+        }
+    }
+}
+
+#sign-up {
+    .container{
+        .even-columns{
+            text-align: center;
+            padding: 2rem;
+            .form-info{
+                h2{
+                    margin-bottom: 1.5rem;
+                }
+                
+                p{
+                    margin-bottom: 1.5rem;
+                }
+            }
+            form {
+                .form-group {
+                    max-width: 16rem;
+                    margin: auto;
+                    input {
+                        width: 100%;
+                        @extend %input;
+                        margin-bottom: 1rem;
+                        border:none;
+                        border-radius: .2rem;
+                    }
+                    button {
+                        width: 100%;
+                        @extend %btn;
+                        border-radius: 0.1rem;
+                    }
+                }
+               
+            }
+        }
+    }
+    
+}
+
+footer {
+    .container{
+        padding: 4rem 2rem;
+        .even-columns{
+            gap: 2rem;
+            address {
+                font-style: normal;
+                a {
+                    display: inline-flex;
+                    margin-bottom: 2rem;
+                    width: 100%;
+                    img {
+                        margin-right: 1.5rem;
+                    }
+                }
+            }
+
+            .secondary-links {
+                li{
+                    padding: .5rem;
+                }
+            }
+
+            .social-media {
+                display: flex;
+                margin: auto;
+                
+                .circle{
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    padding: .3rem .6rem;
+                    margin: 0 .5rem;
+                }
+            }
+        }
+    }
+}
+
+
+@import "media";
