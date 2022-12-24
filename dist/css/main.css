@@ -164,6 +164,8 @@ header .container {
       margin-bottom: 1rem; }
     #storage .container .even-columns div > form button {
       width: 100%; }
+      #storage .container .even-columns div > form button:hover {
+        opacity: 0.8; }
   #storage .container .even-columns picture {
     order: 1; }
     #storage .container .even-columns picture img {
@@ -185,6 +187,8 @@ header .container {
         padding-bottom: .2rem;
         color: #3c9f8f;
         border-bottom: 2px solid #3c9f8f; }
+        #hero .container .even-columns div a:hover {
+          opacity: 0.6; }
         #hero .container .even-columns div a img {
           margin-left: .5rem; }
       #hero .container .even-columns div .testimonial {
@@ -238,6 +242,8 @@ header .container {
     #sign-up .container .even-columns form .form-group button {
       width: 100%;
       border-radius: 0.1rem; }
+      #sign-up .container .even-columns form .form-group button:hover {
+        background-color: #6b8ffd; }
 
 footer .container {
   padding: 4rem 2rem; }
@@ -253,6 +259,8 @@ footer .container {
           margin-right: 1.5rem; }
     footer .container .even-columns .secondary-links li {
       padding: .5rem; }
+      footer .container .even-columns .secondary-links li a:hover {
+        color: #3065f8; }
     footer .container .even-columns .social-media {
       display: flex;
       margin: auto; }
@@ -261,6 +269,8 @@ footer .container {
         border-radius: 50%;
         padding: .3rem .6rem;
         margin: 0 .5rem; }
+        footer .container .even-columns .social-media .circle:hover {
+          color: #3065f8; }
 
 @media (min-width: 600px) {
   .even-columns {
@@ -274,7 +284,7 @@ footer .container {
       opacity: .4; }
   #storage .container .even-columns div > form button, #sign-up .container .even-columns form .form-group button {
     padding: .7rem 1.5rem;
-    border: 1px solid #3c9f8f;
+    border: none;
     cursor: pointer;
     border-radius: .3rem;
     background-color: #3065f8;

@@ -195,10 +195,14 @@ header {
                         width: 100%;
                         @extend %input;
                         margin-bottom: 1rem;
+                        
                     }
                     button {
                         width: 100%;
                         @extend %btn;
+                        &:hover {
+                            opacity: 0.8;
+                        }
                     }
                 }
             }
@@ -232,6 +236,9 @@ header {
                     padding-bottom: .2rem;
                     color: $clr-accent-mc;
                     border-bottom: 2px solid $clr-accent-mc;
+                    &:hover {
+                        opacity: 0.6;
+                    }
                     img{
                         margin-left: .5rem;
                     }
@@ -314,6 +321,9 @@ header {
                         width: 100%;
                         @extend %btn;
                         border-radius: 0.1rem;
+                        &:hover {
+                            background-color: $clr-accent-b2;
+                        }
                     }
                 }
                
@@ -343,6 +353,11 @@ footer {
             .secondary-links {
                 li{
                     padding: .5rem;
+                    a{
+                        &:hover{
+                            color: $clr-accent-bb;
+                        }
+                    }
                 }
             }
 
@@ -355,6 +370,9 @@ footer {
                     border-radius: 50%;
                     padding: .3rem .6rem;
                     margin: 0 .5rem;
+                    &:hover{
+                        color: $clr-accent-bb;
+                    }
                 }
             }
         }
